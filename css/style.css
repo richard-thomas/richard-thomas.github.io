@@ -2,6 +2,11 @@ body {
     background-color:#ffffcc;
 }
 
+h3 {
+    clear: left;
+    padding-top: 5px;
+}
+
 /* Header Panel */
 #header {
     background-image: url("../img/wilkinson_1812.jpg");
@@ -53,9 +58,9 @@ body {
 
 .msc-logo {
     float: left;
-    margin-left: 60px;
-    margin-right: 20px;
-    width: 100px;
+    margin-left: 50px;
+    margin-right: 10px;
+    width: 60px;
     border-width: 0;
 }
 
