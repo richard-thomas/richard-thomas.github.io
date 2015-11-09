@@ -1,0 +1,109 @@
+body {
+    background-color:#ffffcc;
+}
+
+/* Header Panel */
+#header {
+    background-image: url("../img/wilkinson_1812.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px 15px 0px 10px;
+    height: 150px;
+    color: whitesmoke;
+}
+
+#agi_logo {
+    float:right;
+    width:70px;
+    height:140px;
+    border: 1px solid #555555;
+    margin-top: 4px;
+}
+
+#LinkedIn_profile {
+    float:left;
+    width:160px;
+    height:25px;
+    border-width: 0;
+    margin-top: 5px;
+}
+
+#hdr_text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-shadow: 0px 0px 20px #000000;
+    padding-top: 10px;
+    color: white;
+}
+#hdr_text > p {
+    line-height: 0.5;
+}
+.hdr-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#bio-para {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+    font-style: italic;
+}
+
+.msc-logo {
+    float: left;
+    margin-left: 60px;
+    margin-right: 20px;
+    width: 100px;
+    border-width: 0;
+}
+
+/* Project Thumbnails: pop up a larger image on hover */
+.section-logo {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    border: 1px solid black;
+}
+.hover-popup span {
+    position: absolute;
+    left: -9999px;
+    margin: 10px;
+    width: auto;
+    padding: 10px;
+    background: white;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
+    box-shadow: 0 0 20px rgba(0,0,0, .75);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center;
+}
+.hover-popup span img {
+    padding: 1px;
+    background: #888;
+    width: 100%;
+}
+.hover-popup:hover span{
+    z-index: 50;
+    left: 5%;
+}
+
+/* Projects: text sections */
+.proj-title {
+    margin: 0.5em;
+    margin-left: 125px;
+}
+.proj-repos {
+    margin: 0.4em;
+    margin-left: 140px;
+    font-style: italic;
+}
+.proj-content {
+    margin-top: 0.4em;
+    margin-left: 125px;
+    text-align: justify;
+}
