@@ -50,8 +50,8 @@ h3 {
 }
 
 #bio-para {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-align: justify;
     font-style: italic;
 }
@@ -111,4 +111,5 @@ h3 {
     margin-top: 0.4em;
     margin-left: 125px;
     text-align: justify;
+    margin-right: 10px;
 }
