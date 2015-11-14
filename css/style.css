@@ -75,6 +75,7 @@ h3 {
 .hover-popup span {
     position: absolute;
     left: -9999px;
+    bottom: -100px;
     margin: 10px;
     width: auto;
     padding: 10px;
