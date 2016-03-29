@@ -56,12 +56,51 @@ h3 {
     font-style: italic;
 }
 
+.msc-related {
+    position: relative;
+}
 .msc-logo {
     float: left;
     margin-left: 50px;
     margin-right: 10px;
     width: 60px;
     border-width: 0;
+}
+
+/* Blog Thumbnail: pop up a larger image on hover */
+.blog-logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 60px;
+    border: 1px solid black;
+}
+.blog-hover-popup span {
+    position: absolute; /* Offset from enclosing msc-related block */
+    left: -9999px;
+    top: 75px;
+    margin: 10px;
+    width: auto;
+    padding: 10px;
+    background: white;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
+    box-shadow: 0 0 20px rgba(0,0,0, .75);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center;
+}
+.blog-hover-popup span img {
+    padding: 1px;
+    background: #888;
+    width: 100%;
+}
+.blog-hover-popup:hover span{
+    z-index: 50;
+    left: 5%;
 }
 
 /* Project Thumbnails: pop up a larger image on hover */
@@ -73,9 +112,9 @@ h3 {
     border: 1px solid black;
 }
 .hover-popup span {
-    position: absolute;
+    position: fixed; /* Offset from window edges */
     left: -9999px;
-    bottom: -100px;
+    bottom: 1px;
     margin: 10px;
     width: auto;
     padding: 10px;
