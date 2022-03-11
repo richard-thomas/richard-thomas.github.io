@@ -1,10 +1,16 @@
-body {
-    background-color:#ffffcc;
+html {
+    background-color: #eee;
 }
-
+body {
+    margin: auto;
+    background-color: #ffffcc;
+    max-width: 900px;
+}
+p, h3, h4 {
+    margin-left: 0.5em;
+}
 h3 {
     clear: left;
-    padding-top: 5px;
 }
 
 /* Header Panel */
@@ -50,8 +56,9 @@ h3 {
 }
 
 #bio-para {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 0;
     text-align: justify;
     font-style: italic;
 }
@@ -59,24 +66,21 @@ h3 {
 .msc-related {
     position: relative;
 }
+.msc-related-col {
+    margin-left: calc(0.5em + 72px);
+    margin-bottom: 0.8em;
+}
+.msc-related-col * {
+    margin-left: 0;
+}
 .msc-logo {
     float: left;
-    margin-left: 50px;
-    margin-right: 10px;
-    width: 60px;
-    border-width: 0;
-}
-
-/* Blog Thumbnail: pop up a larger image on hover */
-.blog-logo {
-    float: left;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-left: 10px;
     width: 60px;
     border: 1px solid black;
 }
+
+/* Blog Thumbnail: pop up a larger image on hover */
 .blog-hover-popup span {
     position: absolute; /* Offset from enclosing msc-related block */
     left: -9999px;
@@ -96,7 +100,7 @@ h3 {
 .blog-hover-popup span img {
     padding: 1px;
     background: #888;
-    width: 100%;
+    width: calc(100% - 2px);
 }
 .blog-hover-popup:hover span{
     z-index: 50;
@@ -107,7 +111,6 @@ h3 {
 .section-logo {
     float: left;
     margin-left: 10px;
-    margin-right: 10px;
     width: 100px;
     border: 1px solid black;
 }
@@ -130,7 +133,7 @@ h3 {
 .hover-popup span img {
     padding: 1px;
     background: #888;
-    width: 100%;
+    width: calc(100% - 2px);
 }
 .hover-popup:hover span{
     z-index: 50;
@@ -138,26 +141,37 @@ h3 {
 }
 
 /* Projects: text sections */
+.proj-piece {
+    margin-left: calc(1.2em + 112px);
+    margin-bottom: 0.8em;
+}
+.proj-piece * {
+    margin-left: 0;
+}
+.proj-piece ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
 .proj-title {
-    margin: 0.5em;
-    margin-left: 125px;
+    margin-top: 0;
+    margin-bottom: 0.4em;
 }
 .proj-repos {
     margin: 0.4em;
-    margin-left: 140px;
+    margin-left: 0.8em;
     font-style: italic;
 }
 .proj-content {
-    margin-top: 0.4em;
-    margin-left: 125px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0.5em;
     text-align: justify;
-    margin-right: 10px;
 }
 
 a.twitter-timeline {
   /* Buttonish */
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 8px 12px 8px 32px;
   border: #aaa solid 1px;
   border-radius: 10px;
@@ -170,4 +184,18 @@ a.twitter-timeline {
 }
 a.twitter-timeline:hover {
   background-color: #dedede;
+}
+.footer {
+    margin-bottom: 0;
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+}
+.css-validator {
+    right: 1em;
+    position: absolute;
+}
+.css-validator img {
+    border: 0;
+    width: 88px;
+    height: 31px;
 }
