@@ -1,20 +1,42 @@
 html {
     background-color: #eee;
+    font-size: 16px;
 }
 body {
-    background-color: #ffffcc;
+    background-color:#ffffcc;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    margin: 0;
 }
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
     body {
         margin: auto;
-        max-width: 60em;
+        max-width: 61em;
     }
 }
-p, h3, h4 {
-    margin-left: 0.5em;
+p {
+    margin-left: 1.0rem;
+    margin-right: 1.0rem;
+    text-align: justify;
+}
+ul {
+    margin-top: 0.75rem;
+}
+li {
+    margin-right: 0.5rem;
 }
 h3 {
-    clear: left;
+    font-size: 1.25rem;
+    margin-left: 1.0rem;
+    margin-right: 1.0rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+h4 {
+    font-size: 1.125rem;
+    margin-left: 1.0rem;
+    margin-right: 1.0rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Header Panel */
@@ -22,42 +44,43 @@ h3 {
     background-image: url("../img/wilkinson_1812.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    padding: 0px 15px 0px 10px;
-    height: 150px;
+    padding: 5px;
+    height: 140px;
     color: whitesmoke;
 }
 
 #agi_logo {
-    float:right;
-    width:70px;
-    height:140px;
+    float: right;
+    width: 70px;
+    height: 140px;
+    margin-top: -1px;
     border: 1px solid #555555;
-    margin-top: 4px;
 }
 
 #LinkedIn_profile {
-    float:left;
-    width:160px;
-    height:25px;
+    width: 160px;
+    height: 25px;
     border-width: 0;
-    margin-top: 5px;
 }
 
 #hdr_text {
+    position: relative;
+    top: 0;
+}
+#hdr_text p {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-size: 1.3em;
+    font-size: 1.25rem;
     text-shadow: 0px 0px 20px #000000;
-    padding-top: 10px;
-    color: white;
+    margin-bottom: 5px;
+    margin-top: 0;
 }
-#hdr_text > p {
-    line-height: 0.5;
+@media (max-width: 450px) {
+    #hdr_text p {
+        font-size: 1.0rem;
+    }
 }
-.hdr-title {
-    font-size: 24px;
-    font-size: 1.25em;
+p#hdr-title {
+    font-size: 1.33rem;
     font-weight: bold;
 }
 
@@ -71,6 +94,7 @@ h3 {
 
 .msc-related {
     position: relative;
+    clear: left;
 }
 .msc-related-col {
     margin-left: calc(0.5em + 72px);
@@ -82,8 +106,13 @@ h3 {
 .msc-logo {
     float: left;
     margin-left: 10px;
-    width: 60px;
     border: 1px solid black;
+    width: 60px; /* TBD: remove */
+}
+@media (max-width: 450px) {
+    .msc-logo {
+        width: 60px;
+    }
 }
 
 /* Blog Thumbnail: pop up a larger image on hover */
@@ -108,17 +137,26 @@ h3 {
     background: #888;
     width: calc(100% - 2px);
 }
-.blog-hover-popup:hover span{
+.blog-hover-popup:hover:not(.blog-hover-popup:active) span {
     z-index: 50;
     left: 5%;
+    font-size: 0.75em;
 }
 
 /* Project Thumbnails: pop up a larger image on hover */
 .section-logo {
     float: left;
     margin-left: 10px;
-    width: 100px;
     border: 1px solid black;
+    width: 100px; /* TBD: remove */
+}
+@media (max-width: 450px) {
+    .section-logo {
+        width: 100px;
+    }
+}
+.hover-popup {
+    clear: left;
 }
 .hover-popup span {
     position: fixed; /* Offset from window edges */
@@ -140,10 +178,13 @@ h3 {
     padding: 1px;
     background: #888;
     width: calc(100% - 2px);
+    pointer-events: none;
 }
-.hover-popup:hover span{
+.hover-popup:hover:not(.hover-popup:active) span {
     z-index: 50;
     left: 5%;
+    font-size: 0.75em;
+    pointer-events: none;
 }
 
 /* Projects: text sections */
@@ -166,6 +207,7 @@ h3 {
     margin: 0.4em;
     margin-left: 0.8em;
     font-style: italic;
+    text-align: left;
 }
 .proj-content {
     margin-top: 0;
@@ -175,7 +217,7 @@ h3 {
 }
 
 a.twitter-timeline {
-  /* Buttonish */
+  /* Button-ish */
   display: inline-block;
   margin-left: 10px;
   padding: 8px 12px 8px 32px;

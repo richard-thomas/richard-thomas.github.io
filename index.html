@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <title>Richard Thomas: GIS Professional</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <meta property="og:image"
         content="https://richard-thomas.github.io/open_graph_image_for_LinkedIn_robot.jpg">
     <meta property="og:image:width" content="235">
     <meta property="og:image:height" content="140">
 </head>
 <body>
-   <div id="header">
+    <div id="header">
         <a href="https://uk.linkedin.com/in/richardthomas99" target="_blank">
             <img id="LinkedIn_profile"
                 src="img/linked_in_profile_view_button_160x25.png"
@@ -24,7 +26,7 @@
             alt="Student of the Year Award (Association for Geographic Information)">
         </a>
         <div id="hdr_text">
-            <p class="hdr-title">Richard Thomas</p>
+            <p id="hdr-title">Richard Thomas</p>
             <p>Geographical Information Systems (GIS) Professional:</p>
             <p>Spatial Analysis, Systems Development &amp; Web Mapping</p>
         </div>
@@ -70,8 +72,8 @@
         </a>
         <p class="proj-content">
             An outline of how the
-            <a href="https://www.cyclestreets.net/api/v1/journey/">
-                CycleStreets Journey Planner API</a>
+            <a href="https://www.cyclestreets.net/api/v1/journey/"
+                target="_blank">CycleStreets Journey Planner API</a>
             was used as a
             powerful tool for the cycle commuting analysis of my MSc dissertation.
             As an extension of my MSc work, 2 additional detailed maps of the
@@ -126,7 +128,7 @@
             Data and styling for the web map is generated primarily in QGIS
             and exported as 2 OGC GeoPackages using the
             <a href="https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/database.html#package-layers"
-            target="_blank">Package Layers</a> Processing Toolbox operation.
+                target="_blank">Package Layers</a> Processing Toolbox operation.
             This allows the web map to be quickly rebuilt from subsequent updated
             QGIS exports with the workflow:
             <ul><li>
@@ -186,18 +188,18 @@
     </div>
     <div class="proj-piece">
         <a href="http://richard-thomas.github.io/Leeds_Listed_Buildings/"
-        target="_blank">
+            target="_blank">
             <h4 class="proj-title">Google Maps API-based Web App: Leeds Listed Buildings</h4>
         </a>
         <p class="proj-repos">(GitHub Repository:
             <a href="https://github.com/richard-thomas/Leeds_Listed_Buildings"
-            target="_blank">Leeds_Listed_Buildings</a>)
+                target="_blank">Leeds_Listed_Buildings</a>)
         </p>
         <p class="proj-content">
             This is a single-page "web app" written in HTML5/CSS3/JavaScript which
             implements an interactive map for exploring "Listed Buildings" in Leeds demonstrating use of the
             <a href="https://developers.google.com/maps/documentation/javascript/"
-            target="_blank">Google Maps JavaScript API</a>.
+                target="_blank">Google Maps JavaScript API</a>.
             For each building it provides links to further images and details in
             the online Historic England and English Heritage web sites.
         </p>
@@ -219,7 +221,7 @@
         </a>
         <p class="proj-repos">(GitHub Repository:
             <a href="https://github.com/richard-thomas/MetOffice_NIMROD"
-            target="_blank">MetOffice_NIMROD</a>)
+                target="_blank">MetOffice_NIMROD</a>)
         </p>
         <p class="proj-content">
             This module can parse data from UK Met Office Rain Radar NIMROD
@@ -231,14 +233,14 @@
             been included alongside the official MetOffice data repository
             (file "nimrod.py") at the
             <a href="https://data.ceda.ac.uk/badc/ukmo-nimrod/software/python"
-            target="_blank">Centre for Environmental Data Archival (CEDA)</a>.
+                target="_blank">Centre for Environmental Data Archival (CEDA)</a>.
             It was developed from an earlier
             <a href="https://raw.githubusercontent.com/richard-thomas/GIS_MSc/gh-pages/gen_rainfall_time_series.py"
-            target="_blank">Python ArcGIS script</a>-based methodology I put
+                target="_blank">Python ArcGIS script</a>-based methodology I put
             together for automated extraction of recorded time-series rainfall data
             for an MSc project:
             <a href="https://richard-thomas.github.io/GIS_MSc/Hydrological_modelling_real_rainfall_and_flow_data.pdf"
-            target="_blank">Hydrological modelling with real rainfall and flow
+                target="_blank">Hydrological modelling with real rainfall and flow
                 data</a> (3.3 MB PDF).
         </p>
     </div>
@@ -254,16 +256,16 @@
     </div>
     <div class="proj-piece">
         <a href="https://github.com/richard-thomas/GenSynthFlow/"
-        target="_blank">
+            target="_blank">
             <h4 class="proj-title">Java Application: Generating synthetic origin-destination commuter flow data</h4>
         </a>
         <p class="proj-repos">(GitHub Repository:
             <a href="https://github.com/richard-thomas/GenSynthFlow/"
-            target="_blank">GenSynthFlow</a>; Documentation:
+                target="_blank">GenSynthFlow</a>; Documentation:
             <a href="https://richard-thomas.github.io/GenSynthFlow/GenSynthFlow-v1.1-UML.png"
-            target="_blank">UML Diagram</a>,
+                target="_blank">UML Diagram</a>,
             <a href="https://richard-thomas.github.io/GenSynthFlow/JavaDoc/"
-            target="_blank">JavaDoc</a>)
+                target="_blank">JavaDoc</a>)
         </p>
         <p class="proj-content">
             This is an implementation of an original algorithm to create a
@@ -290,13 +292,13 @@
     </div>
     <div class="proj-piece">
         <a href="https://github.com/richard-thomas/GIS_MSc/tree/master/CommuterSim"
-        target="_blank">
+            target="_blank">
             <h4 class="proj-title">Java Graphical Application: Interactive Commuting Simulator</h4>
         </a>    <p class="proj-repos">(GitHub Repository:
             <a href="https://github.com/richard-thomas/GIS_MSc/tree/master/CommuterSim/"
-            target="_blank">CommuterSim</a>; Documentation:
+                target="_blank">CommuterSim</a>; Documentation:
             <a href="https://richard-thomas.github.io/GIS_MSc/CommuterSim/JavaDoc/"
-            target="_blank">JavaDoc</a>)
+                target="_blank">JavaDoc</a>)
         </p>
         <p class="proj-content">
             This was an experiment in developing an interactive software
@@ -310,7 +312,7 @@
             of trade-offs between commuting by car or bike. The
             tabbed GUI was implemented using the Java
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/package-summary.html"
-            target="_blank">Swing</a> toolkit.
+                target="_blank">Swing</a> toolkit.
             This project was developed as a free-choice assignment in my MSc course.
         </p>
     </div>
