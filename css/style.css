@@ -7,6 +7,7 @@ body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     margin: 0;
 }
+/* mini tablet-size displays and larger */
 @media (min-width: 600px) {
     body {
         margin: auto;
@@ -74,6 +75,7 @@ h4 {
     margin-bottom: 5px;
     margin-top: 0;
 }
+/* mobile phone size displays only */
 @media (max-width: 450px) {
     #hdr_text p {
         font-size: 1.0rem;
@@ -109,6 +111,7 @@ p#hdr-title {
     border: 1px solid black;
     width: 60px; /* TBD: remove */
 }
+/* mobile phone size displays only */
 @media (max-width: 450px) {
     .msc-logo {
         width: 60px;
@@ -117,12 +120,15 @@ p#hdr-title {
 
 /* Blog Thumbnail: pop up a larger image on hover */
 .blog-hover-popup span {
+    display: none;
     position: absolute; /* Offset from enclosing msc-related block */
-    left: -9999px;
+    left: 5%;
     top: 75px;
     margin: 10px;
     width: auto;
     padding: 10px;
+    z-index: 50;
+    font-size: 0.75em;
     background: white;
     -webkit-box-shadow: 0 0 20px rgba(0,0,0, .75);
     -moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
@@ -137,10 +143,8 @@ p#hdr-title {
     background: #888;
     width: calc(100% - 2px);
 }
-.blog-hover-popup:hover:not(.blog-hover-popup:active) span {
-    z-index: 50;
-    left: 5%;
-    font-size: 0.75em;
+.blog-hover-popup:hover span {
+    display: block;
 }
 
 /* Project Thumbnails: pop up a larger image on hover */
@@ -150,41 +154,48 @@ p#hdr-title {
     border: 1px solid black;
     width: 100px; /* TBD: remove */
 }
+/* mobile phone size displays only */
 @media (max-width: 450px) {
     .section-logo {
         width: 100px;
     }
 }
 .hover-popup {
+    z-index: 50;
     clear: left;
 }
 .hover-popup span {
     position: fixed; /* Offset from window edges */
     left: -9999px;
+    left: 5%;
+    display: none;
     bottom: 1px;
     margin: 10px;
     width: auto;
     padding: 10px;
     background: white;
+    font-size: 0.75em;
+    text-align: center;
     -webkit-box-shadow: 0 0 20px rgba(0,0,0, .75);
     -moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
     box-shadow: 0 0 20px rgba(0,0,0, .75);
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    text-align: center;
 }
 .hover-popup span img {
     padding: 1px;
     background: #888;
     width: calc(100% - 2px);
-    pointer-events: none;
 }
-.hover-popup:hover:not(.hover-popup:active) span {
-    z-index: 50;
-    left: 5%;
-    font-size: 0.75em;
-    pointer-events: none;
+.hover-popup:hover span {
+    display: block;
+}
+/* Allow desktop browsers to close popups by moving away from hover icon */
+@media (hover: hover) {
+    .hover-popup span, .blog-hover-popup span {
+        pointer-events: none;
+    }
 }
 
 /* Projects: text sections */
