@@ -17,6 +17,7 @@ body {
 p {
     margin-left: 1.0rem;
     margin-right: 1.0rem;
+    margin-bottom: 0.5em;
     text-align: justify;
 }
 ul {
@@ -31,9 +32,10 @@ h3 {
     margin-right: 1.0rem;
     margin-top: 1.3rem;
     margin-bottom: 0.75rem;
+    clear: left;
 }
 h4 {
-    font-size: 1.125rem;
+    font-size: 1.0rem;
     margin-left: 1.0rem;
     margin-right: 1.0rem;
     margin-top: 1.3rem;
@@ -94,23 +96,6 @@ p#hdr-title {
     font-style: italic;
 }
 
-.msc-related {
-    position: relative;
-    clear: left;
-}
-.msc-related-col {
-    margin-left: calc(0.5em + 72px);
-    margin-bottom: 0.8em;
-}
-.msc-related-col * {
-    margin-left: 0;
-}
-.msc-logo {
-    float: left;
-    margin-left: 10px;
-    border: 1px solid black;
-    width: 60px; /* TBD: remove */
-}
 /* mobile phone size displays only */
 @media (max-width: 450px) {
     .msc-logo {
@@ -118,55 +103,31 @@ p#hdr-title {
     }
 }
 
-/* Blog Thumbnail: pop up a larger image on hover */
-.blog-hover-popup span {
-    display: none;
-    position: absolute; /* Offset from enclosing msc-related block */
-    left: 5%;
-    top: 75px;
-    margin: 10px;
-    width: auto;
-    padding: 10px;
-    z-index: 50;
-    font-size: 0.75em;
-    background: white;
-    -webkit-box-shadow: 0 0 20px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
-    box-shadow: 0 0 20px rgba(0,0,0, .75);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    text-align: center;
+/* Projects sections */
+.proj-piece {
+    clear: left;
+    margin-left: 10px;
+    margin-bottom: 0.8em;
 }
-.blog-hover-popup span img {
-    padding: 1px;
-    background: #888;
-    width: calc(100% - 2px);
-}
-.blog-hover-popup:hover span {
-    display: block;
+.proj-piece * {
+    margin-left: 0;
 }
 
 /* Project Thumbnails: pop up a larger image on hover */
-.section-logo {
-    float: left;
-    margin-left: 10px;
-    border: 1px solid black;
-    width: 100px; /* TBD: remove */
+.hover-target:hover span {
+    display: block;
 }
-/* mobile phone size displays only */
-@media (max-width: 450px) {
-    .section-logo {
-        width: 100px;
-    }
+.proj-thumbnail {
+    float: left;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .hover-popup {
     z-index: 50;
-    clear: left;
 }
-.hover-popup span {
+.hover-popup {
     position: fixed; /* Offset from window edges */
-    left: -9999px;
     left: 5%;
     display: none;
     bottom: 1px;
@@ -183,29 +144,18 @@ p#hdr-title {
     -moz-border-radius: 8px;
     border-radius: 8px;
 }
-.hover-popup span img {
+.hover-popup img {
     padding: 1px;
     background: #888;
     width: calc(100% - 2px);
 }
-.hover-popup:hover span {
-    display: block;
-}
-/* Allow desktop browsers to close popups by moving away from hover icon */
+/* Allow desktop browsers to close popups by moving away from thumbnail */
 @media (hover: hover) {
-    .hover-popup span, .blog-hover-popup span {
+    .hover-popup {
         pointer-events: none;
     }
 }
 
-/* Projects: text sections */
-.proj-piece {
-    margin-left: calc(1.2em + 112px);
-    margin-bottom: 0.8em;
-}
-.proj-piece * {
-    margin-left: 0;
-}
 .proj-piece ul {
     margin-top: 0.3em;
     margin-bottom: 0.3em;
@@ -213,18 +163,49 @@ p#hdr-title {
 .proj-title {
     margin-top: 0;
     margin-bottom: 0.4em;
+    margin-left: 2em;
 }
 .proj-repos {
     margin: 0.4em;
-    margin-left: 0.8em;
+    margin-left: 225px;
     font-style: italic;
     text-align: left;
 }
 .proj-content {
     margin-top: 0;
-    margin-bottom: 0;
     margin-right: 0.5em;
     text-align: justify;
+}
+.bullet-pt {
+    display: flex;
+    margin-top: 0;
+}
+.bullet {
+    padding-right: 0.3em;
+}
+.bullet-pt p {
+    margin-top: 0;
+    text-align: left;
+}
+.flow-diagram {
+    display: flex;
+    margin-top: 0;
+    align-items: center;
+}
+.flow-diagram p {
+    border: solid 1px #444;
+    background-color: #ffdba1;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+/* mobile phone size displays only */
+@media (max-width: 450px) {
+    .proj-thumbnail {
+        width: 100px;
+    }
+    .proj-repos {
+        margin-left: 120px;
+    }
 }
 
 a.twitter-timeline {
